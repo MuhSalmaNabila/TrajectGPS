@@ -69,7 +69,7 @@ public class Profile extends AppCompatActivity {
         client.readTimeout(60, TimeUnit.SECONDS);
         client.connectTimeout(60, TimeUnit.SECONDS);
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.236.1")
+                .baseUrl("http://192.168.2.103")
                 .client(client.build())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
