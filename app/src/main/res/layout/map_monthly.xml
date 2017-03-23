@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nabil.radeon.trajectgps.menu_map.MapTaxi">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.google.android.gms.maps.SupportMapFragment"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="135dp"
+                    android:layout_height="98dp"
+                    android:layout_marginBottom="7dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="5dp"
+                    android:clickable="false"
+                    android:background="#a6FFFFFF"
+                    android:id="@+id/boxlegends">
+
+                        <TextView
+                            android:id="@+id/l_legendyellow"
+                            android:text="@string/low_speed"
+                            android:layout_gravity="center_vertical"
+                            android:drawableStart="@drawable/yellowline"
+                            android:drawablePadding="6sp"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginTop="3dp"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                           />
+
+                        <TextView
+                            android:id="@+id/l_legendgreen"
+                            android:text="@string/standard_speed"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="3dp"
+                            android:drawableStart="@drawable/greenline"
+                            android:drawablePadding="6sp"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/l_legendyellow"
+                           />
+
+                        <TextView
+                            android:id="@+id/l_legendred"
+                            android:text="@string/high_speed"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="3dp"
+                            android:drawableStart="@drawable/redline"
+                            android:drawablePadding="6sp"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/l_legendgreen"
+                           />
+                        <TextView
+                            android:id="@+id/l_legendmarker"
+                            android:text="@string/taxistart"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="9dp"
+                            android:drawableStart="@drawable/bluemarker"
+                            android:drawablePadding="8sp"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/l_legendred"
+                            />
+                </RelativeLayout>
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|top"
+            android:textSize="15sp"
+            android:id="@+id/spinner"
+            android:text="Select Date"
+            android:spinnerMode="dropdown"
+            android:popupBackground="#ddd"/>
+
+    </RelativeLayout>
+</FrameLayout>

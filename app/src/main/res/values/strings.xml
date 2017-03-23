@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">Trajectory GPS</string>
+    <string name="profile">Profile</string>
+    <string name="taxi">TAXI</string>
+    <string name="nama">DRIVER =</string>
+    <string name="taxi_id">TAXI ID =</string>
+    <string name="daily">DAILY</string>
+    <string name="monthly">ALL ROUTE</string>
+    <string name="map_not_ready">Map is not ready yet</string>
+    <string name="slide1title">GPS Trajectory Data</string>
+    <string name="slide2title">Mapping route</string>
+    <string name="slide3title">Profile of Taxi</string>
+    <string name="slide1">The easiest way to show tracking map of taxi</string>
+    <string name="slide2">Show routes of taxi daily using Google Maps</string>
+    <string name="slide3">Show the detail of taxi profile for your information</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+    <string name="backexit">Double back press to exit the application</string>
+    <string name="about_title">About Application</string>
+    <string name="about_message">This application is created by M. Salma Nabila A, the student of Computer System Engineering Diponegoro University as an application provider of gps trajectory information from Beijing, China based of taxi path during its operation and the speed profile of taxi. The database used is open source provided by Microsoft Corporation. For more information, please email to malibasyir@gmail.com</string>
+    <string name="exit_title">EXIT</string>
+    <string name="exit_message">Do you want to exit the application?</string>
+    <string name="yes_title">YES</string>
+    <string name="no_title">NO</string>
+
+    <!--    Permissions    -->
+    <string name="permission_rationale_location">Access to the location service is required to demonstrate the \'my location\' feature, which shows your current location on the map.</string>
+    <string name="location_permission_denied">This sample requires location permission to enable the \'my location\' layer. Please try again and grant access to use the location.\nIf the permission has been permanently denied, it can be enabled from the System Settings &gt; Apps &gt; \'Google Maps API Demos\'.</string>
+    <string name="permission_required_toast">Location permission is required for this demo.</string>
+
+    <string-array name="layers_array">
+        <item>@string/normal</item>
+        <item>@string/hybrid</item>
+        <item>@string/satellite</item>
+        <item>@string/terrain</item>
+        <item>@string/none_map</item>
+    </string-array>
+
+    <string name="normal">Normal Map</string>
+    <string name="hybrid">Hybrid Map</string>
+    <string name="satellite">Satellite Map</string>
+    <string name="terrain">Terrain Map</string>
+    <string name="none_map">None Map</string>
+
+    <string name="low_speed">Low Speed</string>
+    <string name="standard_speed">Standard Speed</string>
+    <string name="high_speed">High Speed</string>
+    <string name="taxistart">Taxi Start/Stop</string>
+    <string name="about">About</string>
+    <string name="exit">Exit</string>
+    <string name="l_profile">Profile</string>
+    <string name="Taxi_id">TAXI ID :</string>
+    <string name="name">NAME :</string>
+    <string name="email">EMAIL :</string>
+    <string name="phone">PHONE</string>
+    <string name="lowspeed">Low Speed</string>
+    <string name="highspeed">High Speed</string>
+    <string name="normalspeed">Normal Speed</string>
+    <string name="nomove">Taxi not move</string>
+    <string name="select_date">Select Date</string>
+    <string name="map_type">Map Type</string>
+
+
+</resources>
+
+

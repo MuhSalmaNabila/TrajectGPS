@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:orderInCategory="1"
+        android:id="@+id/driver"
+        app:showAsAction="always"
+        android:title="Driver Profile"
+        android:icon="@drawable/driver"
+        android:onClick="profileDriver"/>
+
+    <item
+        android:orderInCategory="2"
+        android:id="@+id/exit"
+        android:icon="@drawable/map"
+        android:title="@string/map_type"
+        app:showAsAction="always">
+        <!-- "file" submenu -->
+        <menu>
+            <item android:id="@+id/map_normal"
+                android:title="@string/normal" />
+            <item android:id="@+id/map_hybrid"
+                android:title="@string/hybrid" />
+            <item android:id="@+id/map_satellite"
+                android:title="@string/satellite" />
+            <item android:id="@+id/map_terrain"
+                android:title="@string/terrain" />
+        </menu>
+        </item>
+
+
+</menu>
