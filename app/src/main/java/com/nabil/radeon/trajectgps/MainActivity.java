@@ -41,6 +41,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity implements RecyclerItemClickListener.OnItemClickListener{
 
+    private static final String URL = "http://192.168.43.176";
     private ArrayList<AndroidVersion> data;
     private ArrayList<AndroidVersion> data2;
     private DataAdapter adapter;
@@ -196,7 +197,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerItemClick
         client.readTimeout(60, TimeUnit.SECONDS);
         client.connectTimeout(60, TimeUnit.SECONDS);
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.2.103")
+                .baseUrl(URL)
                 .client(client.build())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();

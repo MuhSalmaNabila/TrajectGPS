@@ -29,6 +29,8 @@ import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
 public class Profile extends AppCompatActivity {
+
+    private static final String URL = "http://192.168.43.176";
     TextView driver_velocity;
     TextView driver_habit;
     Double averageKec = 0d;
@@ -69,7 +71,7 @@ public class Profile extends AppCompatActivity {
         client.readTimeout(60, TimeUnit.SECONDS);
         client.connectTimeout(60, TimeUnit.SECONDS);
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.2.103")
+                .baseUrl(URL)
                 .client(client.build())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
