@@ -41,7 +41,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity implements RecyclerItemClickListener.OnItemClickListener{
 
-    private static final String URL = "http://192.168.43.176";
+    private static final String URL = "http://192.168.100.120";
     private ArrayList<AndroidVersion> data;
     private ArrayList<AndroidVersion> data2;
     private DataAdapter adapter;
@@ -202,8 +202,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerItemClick
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         RequestInterface request = retrofit.create(RequestInterface.class);
-
-        Call<JSONResponse> call = request.getJSON();
+        Call<JSONResponse> call = request.getShow();
         call.enqueue(new Callback<JSONResponse>() {
             @Override
             public void onResponse(Call<JSONResponse> call, Response<JSONResponse> response) {

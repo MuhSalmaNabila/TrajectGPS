@@ -19,7 +19,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 import com.nabil.radeon.trajectgps.JSONResponse;
 import com.nabil.radeon.trajectgps.R;
-import com.nabil.radeon.trajectgps.api_interface.MapInterface;
+import com.nabil.radeon.trajectgps.api_interface.RequestInterface;
 import com.nabil.radeon.trajectgps.model.AndroidVersion;
 
 import java.math.RoundingMode;
@@ -30,7 +30,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Profile extends AppCompatActivity {
 
-    private static final String URL = "http://192.168.43.176";
+    private static final String URL = "http://192.168.100.120";
     TextView driver_velocity;
     TextView driver_habit;
     Double averageKec = 0d;
@@ -75,9 +75,9 @@ public class Profile extends AppCompatActivity {
                 .client(client.build())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
-        MapInterface request = retrofit.create(MapInterface.class);
+        RequestInterface request = retrofit.create(RequestInterface.class);
 
-        Call<JSONResponse> call = request.getJSON(strID, "-");
+        Call<JSONResponse> call = request.getMap(strID, "-");
         call.enqueue(new Callback<JSONResponse>() {
             @Override
             public void onResponse(Call<JSONResponse> call, Response<JSONResponse> response) {

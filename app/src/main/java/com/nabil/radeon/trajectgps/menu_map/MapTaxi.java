@@ -55,9 +55,9 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
+import com.nabil.radeon.trajectgps.api_interface.RequestInterface;
 import com.nabil.radeon.trajectgps.model.AndroidVersion;
 import com.nabil.radeon.trajectgps.JSONResponse;
-import com.nabil.radeon.trajectgps.api_interface.MapInterface;
 import com.nabil.radeon.trajectgps.R;
 import java.util.Arrays;
 import java.util.List;
@@ -76,7 +76,7 @@ public class MapTaxi extends AppCompatActivity implements GoogleMap.OnMyLocation
      * Flag indicating whether a requested permission has been denied after returning in
      * {@link #onRequestPermissionsResult(int, String[], int[])}.
      */
-    private static final String URL = "http://192.168.43.176";
+    private static final String URL = "http://192.168.100.120";
     private boolean mPermissionDenied = false;
     private GoogleMap mMap;
     private UiSettings mUiSettings;
@@ -181,9 +181,9 @@ public class MapTaxi extends AppCompatActivity implements GoogleMap.OnMyLocation
                 .client(client.build())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
-        MapInterface request = retrofit.create(MapInterface.class);
+        RequestInterface request = retrofit.create(RequestInterface.class);
 
-        Call<JSONResponse> call = request.getJSON(strID, strTanggal);
+        Call<JSONResponse> call = request.getMap(strID, strTanggal);
         call.enqueue(new Callback<JSONResponse>() {
             @Override
             public void onResponse(Call<JSONResponse> call, Response<JSONResponse> response) {

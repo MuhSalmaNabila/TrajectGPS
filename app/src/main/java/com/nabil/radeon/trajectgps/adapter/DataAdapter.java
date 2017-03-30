@@ -41,13 +41,19 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
         return person.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener  {
         @BindView(R.id.p_id) TextView p_id;
         @BindView(R.id.p_name) TextView p_name;
 
         public ViewHolder(View view) {
             super(view);
             ButterKnife.bind(this, view);
+
+        }
+
+        @Override
+        public void onClick(View v) {
+
         }
     }
 }
