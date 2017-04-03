@@ -29,7 +29,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
-import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import okhttp3.OkHttpClient;
@@ -202,6 +201,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerItemClick
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         RequestInterface request = retrofit.create(RequestInterface.class);
+
         Call<JSONResponse> call = request.getShow();
         call.enqueue(new Callback<JSONResponse>() {
             @Override
@@ -211,7 +211,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerItemClick
                 data = new ArrayList<>(Arrays.asList(jsonResponse.getPerson()));
                 adapter = new DataAdapter(data);
                 recyclerView.setAdapter(adapter);
-            hidepDialog();
+                hidepDialog();
             }
 
             @Override

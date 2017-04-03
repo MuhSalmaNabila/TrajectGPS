@@ -61,6 +61,7 @@
     <string name="select_date">Select Date</string>
     <string name="map_type">Map Type</string>
     <string name="action_search">SEARCH</string>
+    <string name="search">Search</string>
 
 
 </resources>
