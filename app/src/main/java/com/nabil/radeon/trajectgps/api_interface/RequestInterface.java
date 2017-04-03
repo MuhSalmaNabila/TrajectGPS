@@ -14,4 +14,5 @@ public interface RequestInterface {
     @GET("person/connect3.php")
     Call<JSONResponse> getMap(@Query("id") String p_id, @Query("tanggal") String tanggal);
 
+
 }
